@@ -1,25 +1,29 @@
 import React, {useState, useEffect} from 'react';
 import '../stylesheets/App.scss';
-import getInfo from '../services/Api';
+import getToken from '../services/Api';
 
 
-const App = () => {
 
- const [token, setToken] = useState('')
+const App = (props) => {
+
+
+const [token, setToken] = useState('')
 
 useEffect(() => {
-  getInfo().then((data) => {
+  getToken().then((data) => {
    setToken({ data })
  });
 }, [])
 
 
-console.log(token);
+if (token) {
+  console.log(token.data.token)
+}
 
 
 return (
   <div className="App">
-    Holi
+    Holi 
   </div>
 )
 
