@@ -1,36 +1,28 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '../stylesheets/App.scss';
 import getInfo from '../services/Api';
 
-class App extends React.Component {
 
-  constructor(props) {
-    super(props);
+const App = () => {
 
-    this.state = {
-    
-    }
-  }
+ const [token, setToken] = useState('')
 
-  componentDidMount() {
-    getInfo().then((data) => {
-      this.setState({
-        data,
-      })
-    })
-  }
+useEffect(() => {
+  getInfo().then((data) => {
+   setToken({ data })
+ });
+}, [])
 
 
-  render() {
-    console.log(this.state)
-    return ( 
-    
-    <div className="App">
-     Holi
-    </div>
+console.log(token);
 
-    )
-  }
+
+return (
+  <div className="App">
+    Holi
+  </div>
+)
+
 
 }
 
