@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import '../stylesheets/App.scss';
-import getToken from '../services/Api';
+import getData from '../services/Api';
 
 
 
@@ -10,15 +10,15 @@ const App = (props) => {
 const [token, setToken] = useState('')
 
 useEffect(() => {
-  getToken().then((data) => {
-   setToken({ data })
+  getData().then((token) => {
+   setToken({ token })
  });
 }, [])
 
 
-if (token) {
-  console.log(token.data.token)
-}
+// if (token) {
+//   console.log(token)
+// }
 
 
 return (
