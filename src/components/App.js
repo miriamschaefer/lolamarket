@@ -6,6 +6,10 @@ import getData from '../services/Api';
 
 const App = (props) => {
 
+const initialState = {
+  
+}
+
 
 const [token, setToken] = useState('')
 
@@ -16,9 +20,9 @@ useEffect(() => {
 }, [])
 
 
-// if (token) {
-//   console.log(token)
-// }
+if (token) {
+  console.log(token)
+}
 
 
 return (
