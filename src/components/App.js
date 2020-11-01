@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import '../stylesheets/App.scss';
 import  { getToken, getShops, getCategories } from '../services/Api';
+import Menu from './Menu'
 
 
 
-const App = (props) => {
+const App = () => {
 
 const store_id = 1;
 let postalCode = 28010;
@@ -12,6 +12,9 @@ let postalCode = 28010;
 const [token, setToken] = useState('');
 const [shops, setShops] = useState([]);
 const [categories, setCategories] = useState([]);
+
+
+// let category = categories.map((category) => category);
 
 
 useEffect(() => {
@@ -25,14 +28,17 @@ useEffect(() => {
   }
 }, [token, postalCode]);
 
-console.log(token);
-console.log(shops);
-console.log(categories);
-
 
 return (
   <div className="App">
 Holi
+<Menu 
+shops={shops}
+categories={categories}
+token={token}
+postalCode={postalCode}
+store_id={store_id}
+/>
   </div>
 )
 
