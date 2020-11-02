@@ -7,26 +7,18 @@ const Menu = (props) => {
     console.log('soy el menú:', props.categories)
 
 
-
-
-
     const categories = props.categories.map((category, i) => {
         return (
         <ul key={i}>
             {category.name}
+            <Submenu categories={category.categories}/>
         </ul>
         )
     })
 
-
-
     return (
-       <> <div>
-            {categories}
-            
-            <Submenu categories={props.categories}/>
-        </div>
-      
+       <> 
+            {categories}      
         </>
     )
 
