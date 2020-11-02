@@ -23,6 +23,7 @@ const Menu = (props) => {
     return (
        <> <div>
             {categories}
+            
             <Submenu categories={props.categories}/>
         </div>
       
