@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import  { getToken, getShops, getCategories } from '../services/Api';
 import Menu from './Menu'
+import MenuHeader from './MenuHeader'
 
 
 
@@ -12,9 +13,6 @@ let postalCode = 28010;
 const [token, setToken] = useState('');
 const [shops, setShops] = useState([]);
 const [categories, setCategories] = useState([]);
-
-
-// let category = categories.map((category) => category);
 
 
 useEffect(() => {
@@ -29,20 +27,33 @@ useEffect(() => {
 }, [token, postalCode]);
 
 
+console.log(categories);
+
+
+if(categories.length === 0) {
+
+  return "wait"
+
+} else {
+
+
 return (
+
   <div className="App">
-Holi
-<Menu 
+
+<MenuHeader shops={shops} store_id={store_id} postalCode={postalCode}/>
+
+ <Menu
 shops={shops}
 categories={categories}
 token={token}
 postalCode={postalCode}
 store_id={store_id}
-/>
+/> 
   </div>
 )
-
-
 }
+}
+
 
 export default App;

@@ -1,25 +1,32 @@
 import React from 'react';
 import Submenu from './Submenu'
 
+
 const Menu = (props) => {
 
 
-    console.log('soy el menú:', props.categories)
+ const categories = props.categories.map((category, i) => {
 
-
-    const categories = props.categories.map((category, i) => {
         return (
-        <ul key={i}>
-            {category.name}
+            
+        <ul key={i} >
+           <li className="category"> {category.name} </li>
             <Submenu categories={category.categories}/>
+            
         </ul>
+        
         )
     })
 
+
+
     return (
-       <> 
-            {categories}      
-        </>
+        <>
+    <nav>
+        {categories}
+    </nav>
+
+    </>
     )
 
 
