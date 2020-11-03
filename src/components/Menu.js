@@ -23,8 +23,8 @@ const [collapsible, setCollapsible] = useState();
 
     return (
     <ul key={i} className="container">
-        <li id={i} onClick={openCollapsible} className="category"> {category.name} </li>
-        <div className={`${collapsible === i ? "" : "hidden"}`}>
+        <li id={i} onClick={openCollapsible} className="category menu"> {category.name} </li>
+        <div className={`${collapsible === i ? "" : "active"}`}>
             <Submenu categories={category.categories}/>
         </div>
     </ul>

@@ -8,7 +8,7 @@ import Loader from './Loader'
 
 const App = () => {
 
-const store_id = 50;
+const store_id = 1;
 const postalCode = 28010;
 // let category_id = 133;
 

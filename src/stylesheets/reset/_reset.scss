@@ -350,14 +350,6 @@ template {
   display: none;
 }
 
-* {
-  list-style: none;
-  padding: 0;
-  &:focus {
-    outline: none;
-  }
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -367,4 +359,12 @@ h1,
 h2,
 h3 {
   margin: none;
+}
+
+* {
+  list-style: none;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
 }

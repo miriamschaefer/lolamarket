@@ -2,23 +2,8 @@ import React from 'react';
 
 const MenuHeader = (props) => {
 
-// console.log(props)
 
 const shops = props.shops;
-
-// async function renderHeader() {
-//      const selectedStore = shops.find(shop => shop.id === props.store_id);
-
-//      return (
-//         <div>
-//             {selectedStore.name}
-//             <img src={selectedStore.icon} alt={selectedStore.name}/>
-//         </div>
-//     )
-// }
-
-// renderHeader();
-
 
 
 const selectedStore = shops.find(shop => shop.id === props.store_id);
@@ -27,13 +12,19 @@ console.log(selectedStore);
 
 
      return (
-        <div style={{backgroundColor: `rgb(${selectedStore.color})`}}>
-            <img src={selectedStore.icon} alt={selectedStore.name}/><br/>
-            <span>Comprando en {props.postalCode}</span>
-            
-            <h1>{selectedStore.name}</h1>
-            
+    <div className="menu-header holi"style={{backgroundColor: `rgb(${selectedStore.color})`}}>
+    <div className="menu-header__data">
+        <div className="menu-header__data__img">
+            <img src={selectedStore.icon} alt={selectedStore.name}/>
         </div>
+        
+        <h1>{selectedStore.name}</h1>
+        <h2>Comprando en {props.postalCode}</h2>
+    </div>
+        <div className="menu-header__nav">
+           <a href="#" alt="Cambiar de tienda">Cambiar</a>
+        </div>
+    </div>
     )
 
      

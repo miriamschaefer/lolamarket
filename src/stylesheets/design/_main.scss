@@ -3,6 +3,7 @@
   font-size: rem(16);
   display: grid;
   grid-template-columns: 324px auto;
+  height: 100vh;
 
   &__menu {
     border: 1px solid green;
@@ -11,15 +12,25 @@
 }
 
 .category {
-  border: 1px solid red;
   font-size: rem(20);
-  position: relative;
+  height: 56px;
+  text-align: left;
+  margin-top: 0;
+  border: 1px solid red;
 }
+
+// ul {
+//   font-size: 0;
+// }
 
 .subcategory {
   border: 1px solid blue;
 }
 
-.hidden {
-  visibility: hidden;
+.active {
+  padding: 0;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  margin: 0;
 }
