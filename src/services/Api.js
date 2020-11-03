@@ -55,7 +55,7 @@ const getCategories = async (token, postalCode, store_id) => {
  }
 
 
-//  const getSubcategories = async (token, postalCode, store_id, category_id) => {
+//  const getProducts = async (token, postalCode, store_id, category_id) => {
 
 //   const getSubcategories = await fetch(`${productRequest}?token=${token}&postalcode=${postalCode}&company_id=${store_id}&${category_id}`);
 //   const subcategories = await getSubcategories.json();
