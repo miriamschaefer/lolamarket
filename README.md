@@ -34,6 +34,7 @@ En la rama DEV podéis observar en código comentado la manera en la que empecé
 - Aparición de las flechas chevron sólo cuando el usuario hace hover sobre la lista. Comencé a implementar esta característica, pero por cuestión de tiempo no pude terminarla, así que para que la usabilidad y diseño del menú manteniesen cierta armonía y lógica, decidí que las flechas se mostrasen siempre y girasen cuando el usuario hiciese click sobre ellas. En la rama dev podéis ver como creé un estado `isShown` para que en el event `onMouseEnter` esto fuese **true** y se renderizase la imagen, pero sólo conseguí que lo hiciese en todos los elementos a la vez y no sólo en el elemento sobre el que el usuario estaba haciendo hover 😅. Mi planteamiento es hacer algo similar a los colapsables, con el id del elemento seleccionado compararlo con el `i` del elemento. Seguiré trabajando en ello.
 - Implementación del check ✔ cuando el usuario clicka sobre una sección.
 - Implementar animaciones para que el menú se abriese de manera más fluida.
+- Maquetación responsive... ¿Quizás en un futuro convertirlo en un burger menu?
 
 ## Principales aprendizajes
 
