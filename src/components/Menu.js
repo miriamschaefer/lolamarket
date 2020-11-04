@@ -5,8 +5,6 @@ import chevron from '../images/ic_hide.svg';
 const Menu = (props) => {
 
 const [collapsible, setCollapsible] = useState();
-// const [isShown, setIsShown] = useState(false);
-console.log(props);
 
     const collapsibleHandler = (clickedId) => {
         if(clickedId !== collapsible) {
@@ -16,32 +14,10 @@ console.log(props);
         }
     }
 
-    // const hoverHandler = (hoverId) => {
-    //     if(hoverId !== isShown) {
-    //         setIsShown(true);
-    //     } else {
-    //         setIsShown(false);
-
-    //     }
-    // }
-
     const openCollapsible = (ev) => {
         let parsedId = parseInt(ev.currentTarget.id);
         collapsibleHandler(parsedId);
     }
-
-    //   const showChevron = (obj) => {
-    //     let parsedId = parseInt(obj.target.id);
-    //     console.log(parsedId);
-    //     hoverHandler(parsedId);
-    //   }
-
-    //   const compareIds = (obj) => {
-    //     let parsedId = parseInt(obj.target.id);
-    //     if (parsedId === isShown) {
-    //         return true
-    //     }
-    //   }
 
  const categories = props.categories.map((category, i) => {
 
@@ -50,8 +26,6 @@ console.log(props);
     <div id={i}
     onClick={openCollapsible}
     className="App__menu-content__category__content"
-    // onMouseEnter={showChevron}
-    // onMouseLeave={() => setIsShown(false)}
     >
 
     <div className="App__menu-content__category__content__icon">
@@ -67,13 +41,6 @@ console.log(props);
         <img src={chevron} alt="chevron-down"/>
         </div>
     </div>
-
-    {/* {isShown (<div
-       >
-        <img src={chevron} alt="chevron-down"/>
-            
-    </div>)}
-         */}
     </div>
     
     <ul className={`${collapsible === i ? "" : "active"}`}>

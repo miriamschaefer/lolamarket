@@ -13,8 +13,6 @@ const postalRequest = 'https://api.comprea.com/v7/user/postalcode';
 
 const shopRequest = 'https://api.comprea.com/v7/company/categories';
 
-// const productRequest = 'https://api.comprea.com/v7/company/items';
-
 
 const getToken = async () => {
 
@@ -52,15 +50,6 @@ const getCategories = async (token, postalCode, store_id) => {
 
  }
 
-
-//  const getProducts = async (token, postalCode, store_id, category_id) => {
-
-//   const getSubcategories = await fetch(`${productRequest}?token=${token}&postalcode=${postalCode}&company_id=${store_id}&${category_id}`);
-//   const subcategories = await getSubcategories.json();
-//   console.log(subcategories);
-//   return subcategories;
-
-//  }
 
 
 
