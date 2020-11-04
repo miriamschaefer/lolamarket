@@ -62,7 +62,7 @@ console.log(props);
 
     <h3 className="App__menu-content__category__content__category__name">{category.name}</h3>
 
-    <div className="App__menu-content__category__content__chevron">
+    <div className={`App__menu-content__category__content__chevron ${collapsible === i ? '' : 'transform'}`}>
 
         <img src={chevron} alt="chevron-down"/>
         </div>
