@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-El principal objetivo de esta prueba técnica consiste en renderizar un menú colapsable dados unos datos que provienen de la [api](https://api.comprea.com/v7/).
+El principal objetivo de esta prueba técnica consiste en renderizar un menú colapsable dados unos datos que provienen de la [API](https://api.comprea.com/v7/).
 
 - Renderización de categorías y subcategorías de cada tienda.
 - Especificación visual.
@@ -30,10 +30,17 @@ Una vez renderizados los elementos necesarios del menú empecé a lidiar con los
 En la rama DEV podéis observar en código comentado la manera en la que empecé estas tareas:
 
 - Implementación de React Router. Aunque instalado y comenzada la estructura, faltaría pasarle a la URL todos los id necesarios para la url `/tienda/{{ market }}/{{ category }}/{{ sub_category }}`. Para ello hubiese buscado en los props de la ruta el id por medio de `props.match.params`.
+- Gestión de los productos de cada sección. En la rama dev tenéis el fetch de cada sección, pero no lo implementé en main.
 - Aparición de las flechas chevron sólo cuando el usuario hace hover sobre la lista. Comencé a implementar esta característica, pero por cuestión de tiempo no pude terminarla, así que para que la usabilidad y diseño del menú manteniesen cierta armonía y lógica, decidí que las flechas se mostrasen siempre y girasen cuando el usuario hiciese click sobre ellas. En la rama dev podéis ver como creé un estado `isShown` para que en el event `onMouseEnter` esto fuese **true** y se renderizase la imagen, pero sólo conseguí que lo hiciese en todos los elementos a la vez y no sólo en el elemento sobre el que el usuario estaba haciendo hover 😅. Mi planteamiento es hacer algo similar a los colapsables, con el id del elemento seleccionado compararlo con el `i` del elemento. Seguiré trabajando en ello.
 - Implementación del check ✔ cuando el usuario clicka sobre una sección.
 - Implementar animaciones para que el menú se abriese de manera más fluida.
 
-### Por si interesa...
+## Principales aprendizajes
+
+Principalmente, la mayor parte del tiempo lo pasé trabajando con la API y gestionando los errores derivados de la asincronía 🙃
+
+#### Por si interesa...
 
 Y aunque no tiene importancia, programé esto mientras escuchaba en bucle el disco Allah-Lahs del grupo Allah-Lahs 🎵
+
+## ¡Muchas gracias por vuestro tiempo!
