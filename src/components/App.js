@@ -42,6 +42,8 @@ if(categories.length === 0) {
 
 return (
 
+<React.Fragment>
+
 <div className="App">
   <nav className="App__menu">
     <MenuHeader shops={shops} store_id={store_id} postalCode={postalCode}/>
@@ -55,13 +57,11 @@ return (
     />
     </nav>
 
-<React.Fragment>
-  <>
     <Store />
-  </>
 
-  </React.Fragment>
+
 </div>
+</React.Fragment>
 )
 }
 }
