@@ -44,14 +44,12 @@ const getShops = async (token, postalCode) => {
 }
 
 
-
-
 const getCategories = async (token, postalCode, store_id) => {
 
   const getCategories = await fetch(`${shopRequest}?token=${token}&postalcode=${postalCode}&company_id=${store_id}`);
   const categories = await getCategories.json();
-  console.log(categories);
   return categories;
+
  }
 
 
