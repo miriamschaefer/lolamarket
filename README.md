@@ -14,11 +14,9 @@ Mi primer acercamiento al ejercicio fue conseguir traer los datos de la API para
 
 A partir de ahí, cree una estructura de componentes sencilla para renderizar cada elemento y pasarle así los datos necesarios a cada uno:
 
-1. App.js
-2. Menu.js
-
-- MenuHeader.js
-- Submenu.js
-
-3. Store.js
-4. Loader.js
+- App.js
+- Menu.js
+  - MenuHeader.js
+  - Submenu.js
+- Store.js
+- Loader.js
