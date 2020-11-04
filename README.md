@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-El principal objetivo de esta prueba técnica consiste en renderizar un menú colapsable dados unos datos que provienen de la api [https://api.comprea.com/v7/]
+El principal objetivo de esta prueba técnica consiste en renderizar un menú colapsable dados unos datos que provienen de la [api][https://api.comprea.com/v7/]
 
 - Renderización de categorías y subcategorías de cada tienda.
 - Especificación visual.
